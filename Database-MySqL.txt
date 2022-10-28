@@ -1,0 +1,87 @@
+Enter password: ********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 1090
+Server version: 8.0.30 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use RLL;
+Database changed
+mysql> select * from movie;
++----+---------------+-----------------------------------+----------------+-------------------------+-----------------------------------------------------------------------------------------------------+
+| id | duration      | genre                             | language       | name                    | banner                                                                                              |
++----+---------------+-----------------------------------+----------------+-------------------------+-----------------------------------------------------------------------------------------------------+
+|  1 | 2 hrs 30 mins | Violence, Destruction             | English        | Godzilla vs. Kong Movie | https://i.ytimg.com/vi/odM92ap8_c0/maxresdefault.jpg                                                |
+|  2 | 2 hrs         | Crime Thrillers                   | English        | The Girl on the Train   | https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVL23SsyUdR0zJqdkFtSy85TYfxGHMeYUlXw&usqp=CAU |
+|  3 | 2h 51m        | Drama                             | English, Hindi | KAbir                   | https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN0FlHZOMjFykvJpxJ96QugMSysRzm16MVYA&usqp=CAU |
+|  4 | 2 hrs         | strong voilence and bloddy images | English        | Nobody                  | https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbb-MmZAl2uTJa0p338tU_TTnyCW53DRnl8g&usqp=CAU |
+|  5 | 2 hrs         | Animation, Action, Adventure      | English        | Invincible              | https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqWvNY_7qqXR5BXhGYgQRukadHFoPmGm421A&usqp=CAU |
+|  6 | 2 hrs 0 mins  | Action, Adventure, Comedy         | English        | Thunder Force           | https://i.ytimg.com/vi/vM6DutdFM_E/maxresdefault.jpg                                                |
++----+---------------+-----------------------------------+----------------+-------------------------+-----------------------------------------------------------------------------------------------------+
+6 rows in set (0.01 sec)
+
+mysql> select * from theater;
++----+-----------------+--------------+-----------------------+-------+
+| id | theatre_address | theatre_name | theatre_seat_capacity | movie |
++----+-----------------+--------------+-----------------------+-------+
+|  1 | Lake MAll       | Cinepolis    |                  NULL |     2 |
+|  3 | Sector1         | Carnival     |                  NULL |     1 |
+|  4 | Swar Bhumi      | FUN          |                  NULL |     4 |
+|  5 | Nehru Steret    | ROMEO        |                  NULL |     3 |
++----+-----------------+--------------+-----------------------+-------+
+4 rows in set (0.01 sec)
+
+mysql> select * from user;
++----+---------------------------+------------+-----------+----------+-------+
+| id | email                     | first_name | last_name | password | role  |
++----+---------------------------+------------+-----------+----------+-------+
+|  1 | gautamdas251998@gmail.com | Gautam     | Das       | 123456   | user  |
+|  2 | admin@gmail.com           | Admin      | Admin     | 123456   | admin |
++----+---------------------------+------------+-----------+----------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select * from movie;
++----+---------------+-----------------------------------+----------------+-------------------------+-----------------------------------------------------------------------------------------------------+
+| id | duration      | genre                             | language       | name                    | banner                                                                                              |
++----+---------------+-----------------------------------+----------------+-------------------------+-----------------------------------------------------------------------------------------------------+
+|  1 | 2 hrs 30 mins | Violence, Destruction             | English        | Godzilla vs. Kong Movie | https://i.ytimg.com/vi/odM92ap8_c0/maxresdefault.jpg                                                |
+|  2 | 2 hrs         | Crime Thrillers                   | English        | The Girl on the Train   | https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVL23SsyUdR0zJqdkFtSy85TYfxGHMeYUlXw&usqp=CAU |
+|  3 | 2h 51m        | Drama                             | English, Hindi | KAbir                   | https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN0FlHZOMjFykvJpxJ96QugMSysRzm16MVYA&usqp=CAU |
+|  4 | 2 hrs         | strong voilence and bloddy images | English        | Nobody                  | https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbb-MmZAl2uTJa0p338tU_TTnyCW53DRnl8g&usqp=CAU |
+|  5 | 2 hrs         | Animation, Action, Adventure      | English        | Invincible              | https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqWvNY_7qqXR5BXhGYgQRukadHFoPmGm421A&usqp=CAU |
+|  6 | 2 hrs 0 mins  | Action, Adventure, Comedy         | English        | Thunder Force 2         | https://i.ytimg.com/vi/vM6DutdFM_E/maxresdefault.jpg                                                |
++----+---------------+-----------------------------------+----------------+-------------------------+-----------------------------------------------------------------------------------------------------+
+6 rows in set (0.01 sec)
+
+mysql> select * from booked_seats;
++----+-------+---------+------------+---------------------+--------------------+---------+
+| id | seat  | show_id | theater_id | date                | time               | theater |
++----+-------+---------+------------+---------------------+--------------------+---------+
+|  1 |  F5   |    NULL |       NULL | 2021-04-24 05:30:00 | 01:00 PM (Matnee)  |       1 |
+|  2 |  G6   |    NULL |       NULL | 2021-04-24 05:30:00 | 01:00 PM (Matnee)  |       1 |
+|  3 |  E6   |    NULL |       NULL | 2021-04-15 05:30:00 | 08:00 PM (Night)   |       4 |
+|  4 |  C3   |    NULL |       NULL | 2021-04-15 05:30:00 | 08:00 PM (Night)   |       4 |
+|  5 |  G4   |    NULL |       NULL | 2021-04-24 05:30:00 | 01:00 PM (Matnee)  |       1 |
+|  6 |  H2   |    NULL |       NULL | 2021-04-24 05:30:00 | 01:00 PM (Matnee)  |       1 |
+|  7 |  E6   |    NULL |       NULL | 2021-04-22 05:30:00 | 10:00 AM (Morning) |       1 |
+|  8 |  E3   |    NULL |       NULL | 2021-04-22 05:30:00 | 10:00 AM (Morning) |       1 |
+|  9 |  F6   |    NULL |       NULL | 2021-04-29 05:30:00 | 01:00 PM (Matnee)  |       3 |
+| 10 |  F8   |    NULL |       NULL | 2021-04-29 05:30:00 | 01:00 PM (Matnee)  |       3 |
+| 11 |  F10  |    NULL |       NULL | 2021-04-29 05:30:00 | 01:00 PM (Matnee)  |       3 |
+| 12 |  F1   |    NULL |       NULL | 2021-04-29 05:30:00 | 01:00 PM (Matnee)  |       3 |
+| 13 |  C2   |    NULL |       NULL | 2021-04-02 05:30:00 | 04:00 PM (Evening) |       1 |
+| 14 |  C4   |    NULL |       NULL | 2021-04-02 05:30:00 | 04:00 PM (Evening) |       1 |
+| 15 |  B1   |    NULL |       NULL | 2022-10-30 05:30:00 | 10:00 AM (Morning) |       4 |
+| 16 |  B2   |    NULL |       NULL | 2022-10-30 05:30:00 | 10:00 AM (Morning) |       4 |
+| 17 |  A9   |    NULL |       NULL | 2022-10-31 05:30:00 | 10:00 AM (Morning) |       3 |
+| 18 |  A10  |    NULL |       NULL | 2022-10-31 05:30:00 | 10:00 AM (Morning) |       3 |
++----+-------+---------+------------+---------------------+--------------------+---------+
+18 rows in set (0.04 sec)
+
+mysql>
