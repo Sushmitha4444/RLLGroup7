@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: SUSHMITHA PREMANAND
+Build-Jdk: 17.0.4
+Implementation-Title: My-Movie-Planner
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.movieplan
+Implementation-URL: https://spring.io/projects/spring-boot/My-Movie-Plan
+ ner
+Created-By: Maven Integration for Eclipse
+
